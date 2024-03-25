@@ -1,0 +1,29 @@
+﻿@model IEnumerable<ProyectoNero.Client.CarruselIndex>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<link rel="stylesheet" href="~/css/IndexPrincipal.css" asp-append-version="true" />
+<div class="text-center">
+    <div class="slider-container">
+        @foreach (var item in Model)
+        {
+            <div class="slide active" id="slide1">
+                <div class="text-box">
+                    <h2>@Html.DisplayFor(modelItem => item.Titulo)</h2>
+                    <p>@Html.DisplayFor(modelItem => item.Descripcion)</p>
+                    <a href="@Html.DisplayFor(modelItem => item.UrlLink)" class="btn">Leer mas</a>
+                </div>
+                <img src="@Html.DisplayFor(modelItem => item.UrlImagen)" alt="Slide 1">
+            </div>
+        }
+
+        <!--Used font awesome for prev and next icons-->
+        <i class="arrow fa-solid fa-arrow-left" id="prevBtn"></i>
+        <i class="arrow fa-solid fa-arrow-right" id="nextBtn"></i>
+
+    </div>
+
+</div>
+<script src="~/js/demo.js"></script>

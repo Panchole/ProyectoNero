@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ProyectoNero.Client</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/MasterPage.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ProyectoNero.Client.styles.css" asp-append-version="true" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rakkas&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ecab628f06.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <h1>
+                        <a href="index.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="70" height="70"
+                                viewBox="0 0 48 48">
+                                <path fill="#d50000"
+                                    d="M37,13L29,3l5.5,10L25,22V5l1-2l-1.5,0.5L24,1l-0.5,2.5L22,3l1,2v17l-9.5-9L19,3l-8,10l11,10.5L11,34	l12,12l1,1l1-1l12-12L26,23.5L37,13z M14.5,34l8.5-8.5v17.447L14.5,34z M33.5,34L25,42.947V25.5L33.5,34z">
+                                </path>
+                            </svg>
+                            <span>Poryecto Nero</span>
+                        </a>
+                    </h1>
+                </li>
+                <li><a href="">Place</a></li>
+                <li><a href="">Holder</a></li>
+                <li><a href="">Place</a></li>
+                <li><a href="">Holder</a></li>
+                <li>
+                    <a href="" target="blank">
+                        <span class="fab fa-linkedin" aria-hidden="true"></span>
+                        <span class="sr-only">LinkedIn</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="fab fa-github" aria-hidden="true"></span>
+                        <span class="sr-only">GitHub</span>
+                    </a>
+                </li>
+            </ul>
+            <canvas id="canvas"></canvas>
+        </nav>
+        <div class="gradient"></div>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 48 48">
+                        <path fill="#d50000"
+                            d="M37,13L29,3l5.5,10L25,22V5l1-2l-1.5,0.5L24,1l-0.5,2.5L22,3l1,2v17l-9.5-9L19,3l-8,10l11,10.5L11,34	l12,12l1,1l1-1l12-12L26,23.5L37,13z M14.5,34l8.5-8.5v17.447L14.5,34z M33.5,34L25,42.947V25.5L33.5,34z">
+                        </path>
+                    </svg>
+                </div>
+                <div class="footer-links">
+                    <ul class="footer-menu">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <ul class="social-icons">
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Your Company. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+</html>
